@@ -1,7 +1,7 @@
 # Start and destroy Azure Container Instance groups from a C# Azure Function and with the Azure Management Fluent API.
 This sample demonstrated how to create and destroy Azure Container Instance groups from a C# Azure Function by using the Azure Management Fluent API.
 
-It assumes the Azure Function is triggered by a message sent to an Azure Service Bus topic, and the function posts back a response on the same topic. But the trigger can be changed to anything like HTTP, schedule, Event Grid, or any other trigger supported by Azure Functions.
+It assumes the Azure Function is triggered by a message sent to an Azure Service Bus topic, and the function posts back a response to the same topic containing the resource id of the ACI group created. But the trigger can be changed to anything like HTTP, schedule, Event Grid, or any other trigger supported by Azure Functions.
 
 ## Create an Azure Service Principal
 You need to create an Azure AD Service Principal, so it can be used by the Azure Function to create Azure Container Instance groups in a resource group of your choice.
@@ -28,3 +28,23 @@ You need to set the following app settings in you local.settings.json file for t
 - ContainerRegistryServer: Azure Container Registry server where your container image is stored;
 - ContainerRegistryUsername: Azure Container Registry username;
 - ContainerRegistryPassword: Azure Container Registry password (you need to enable Admin access on your ACR service).
+
+## Message Bus message example
+The function accepts two types of messages:
+- START_CONTAINER;
+- DELETE_CONTAINER.
+
+**Messages examples:**
+
+`
+{
+  "messageType": "START_CONTAINER"
+}
+`
+
+`
+{
+  "messageType": "DELETE_CONTAINER",
+  "payload": "/subscriptions/your_subscription_id/resourceGroups/your_resourcegroup_name/providers/Microsoft.ContainerInstance/containerGroups/your_containerinstance_group_name"
+}
+`
