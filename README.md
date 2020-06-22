@@ -8,7 +8,7 @@ You need to create an Azure AD Service Principal, so it can be used by the Azure
 
 `az ad sp create-for-rbac --name <NAME> --role contributor --scopes <RG_RESOURCE_ID> --sdk-auth`
   
-Replace <NAME> with the name you want to give to the Azure App and <RG_RESOURCE_ID> with the resource group ID where the Azure Function will deploy Azure Container Instance groups.
+Replace NAME tag with the name you want to give to the Azure App and RG_RESOURCE_ID tag with the resource group ID where the Azure Function will deploy Azure Container Instance groups.
   
 The command will return a JSON formatted value. Copy and paste it somewhere, we'll need it later.
 
