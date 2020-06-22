@@ -31,7 +31,7 @@ You need to set the following app settings in you local.settings.json file for t
 
 **Config example:**
 
-`ServiceBusConnectionString: Endpoint=sb://your_instance.servicebus.windows.net/;SharedAccessKeyName=haredAccessKeyName;SharedAccessKey=SharedAccessKeyValue
+` ServiceBusConnectionString: Endpoint=...
 
     ServicePrincipalClientId: 00000000-0000-0000-0000-000000000000
     
