@@ -29,12 +29,12 @@ You need to set the following app settings in you local.settings.json file for t
 - ContainerRegistryUsername: Azure Container Registry username;
 - ContainerRegistryPassword: Azure Container Registry password (you need to enable Admin access on your ACR service).
 
-## Message Bus message example
-The function accepts two types of messages:
+## Message Bus message examples
+The function accepts two types of message:
 - START_CONTAINER;
 - DELETE_CONTAINER.
 
-**Messages examples:**
+**Message examples:**
 
 `
 {
