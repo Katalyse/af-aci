@@ -28,3 +28,25 @@ You need to set the following app settings in you local.settings.json file for t
 - ContainerRegistryServer: Azure Container Registry server where your container image is stored;
 - ContainerRegistryUsername: Azure Container Registry username;
 - ContainerRegistryPassword: Azure Container Registry password (you need to enable Admin access on your ACR service).
+
+**Config example:**
+
+`ServiceBusConnectionString: Endpoint=sb://your_instance.servicebus.windows.net/;SharedAccessKeyName=haredAccessKeyName;SharedAccessKey=SharedAccessKeyValue
+
+    ServicePrincipalClientId: 00000000-0000-0000-0000-000000000000
+    
+    ServicePrincipalClientSecret: your_secret
+    
+    ServicePrincipalTenantId: 00000000-0000-0000-0000-000000000000
+    
+    ContainerNamePrefix: ci-katalyse
+    
+    ResourceGroupName: RG-KATALYSE-TEST
+    
+    ContainerRegistryServer: your_instance.azurecr.io
+    
+    ContainerRegistryUsername: your_instance
+    
+    ContainerRegistryPassword: your_password
+    
+    ImageName: your_instance.azurecr.io/yourcontainer:latest`
