@@ -1,4 +1,4 @@
-# Start and destroy Azure Container Instance from a C# Azure Function and with Azure Management Fluent API.
+# Start and destroy Azure Container Instance from a C# Azure Function and with the Azure Management Fluent API.
 This sample demonstrated how to create and destroy Azure Container Instance groups from a C# Azure Function by using the Azure Management Fluent API.
 
 It assumes the Azure Function is triggered by a message sent to an Azure Service Bus topic, and the function posts back a response on the same topic. But the trigger can be changed to anything like HTTP, schedule, Event Grid, or any other trigger supported by Azure Functions.
